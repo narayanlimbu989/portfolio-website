@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portfolio website</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+        background: #425658;
+        color: #fff;
+      }
+      p,
+      h1,
+      h2,
+      h3 {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        padding: 20px 80px;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 25px;
+        border: 2px solid;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.7s;
+        animation: slightright 1s linear forwards;
+      }
+      .logo:hover {
+        background: #fff;
+        color: #425658;
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 10px 5px #fff;
+      }
+      .menu {
+        display: flex;
+        gap: 10px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        transition: 0.7s;
+        border-radius: 30px;
+        padding: 0 5px;
+        font-weight: 600;
+        border: 2px solid transparent;
+        animation: slightright calc(var(--i) * 0.2s) linear forwards;
+      }
+      a:hover {
+        background: #fff;
+        color: #425658;
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 10px 5px #fff;
+      }
+      .homecontainer{
+        position: relative;
+        height: 80vh;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .homecontainer>.left{
+        width: 600px;
+      }
+      .intro{
+        font-size: 25px;
+        font-style: italic;
+        animation: slightright 1s linear forwards;
+      }
+      .name{
+        font-size: 30px;
+        animation: slightleft 1s linear forwards;
+      }
+      h2{
+        font-size: 35px;
+        animation: slightright 1s linear forwards;
+      }
+      p{
+        font-size: 17px;
+        text-align: justify;
+        animation: slightleft 1s linear forwards;
+      }
+      .findme{
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+    }
+    .findme>i{
+        font-size: 35px;
+        border: 2px solid;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 10px;
+        animation: slightleft calc(var(--i)*0.3s) linear forwards;
+      }
+      i:hover{
+        transition: 0.7s;
+        background: #fff;
+        color: #425658;
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 10px 5px #fff;
+      }
+      button{
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        background: #fff;
+        color: #425658;
+        border: none;
+        border: 2px solid transparent;
+        border-radius: 30px;
+        cursor: pointer;
+        animation: slightTop 1s linear forwards;
+      }
+      button:hover{
+        transition: 0.7s;
+        background: #fff;
+        color: #425658;
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 10px 5px #fff;
+      }
+      .right{
+        animation: slightTop 1s linear forwards;
+      }
+      .circle{
+        background: #fff;
+        box-shadow: 1px 5px 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        animation: animated 1s linear infinite;
+        animation-delay: 1s;
+      }
+      .img{
+        position: absolute;
+        top: 5px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        height: 290px;
+        width: 290px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .img>img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      /* animation */
+      @keyframes animated {
+        100%{
+            transform: rotate(360deg);
+        }
+      }
+      @keyframes slightright {
+        0% {
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes slightleft {
+        0% {
+          transform: translateX(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes slightTop {
+        0% {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">Portfolio</div>
+        <div class="menu">
+          <a style="--i: 1" href="/">Home</a>
+          <a style="--i: 2" href="/about">About</a>
+          <a style="--i: 3" href="/project">Projects</a>
+          <a style="--i: 4" href="/service">Services</a>
+          <a style="--i: 5" href="/contact">Contact</a>
+        </div>
+      </div>
+      <div class="homecontainer">
+        <div class="left">
+          <h3 class="intro">Hello It's me.</h3>
+          <h3 class="name">Kristina kumar sharma</h3>
+          <h2>I am software Developer.</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
+            tempore, eius alias cupiditate sapiente delectus quaerat obcaecati
+            labore, ad, necessitatibus eveniet quo praesentium ab facere animi
+            consectetur cumque unde dignissimos.
+          </p>
+          <div class="findme">
+            <i style="--i: 1" class="fa-brands fa-facebook"></i>
+            <i style="--i: 2" class="fa-brands fa-twitter"></i>
+            <i style="--i: 3" class="fa-brands fa-github"></i>
+            <i style="--i: 5" class="fa-brands fa-pinterest"></i>
+            <i style="--i: 5" class="fa-brands fa-viber"></i>
+          </div>
+          <button>Download CV</button>
+        </div>
+        <div class="right">
+          <div class="circle"></div>
+          <div class="img">
+            <img src="/img1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
